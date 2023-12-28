@@ -11,10 +11,10 @@ int longestSubstrDistinctChars(string s) {
   int window_start = 0, window_end = 0;
   while (window_end < n) {
     char right_char = s[window_end];
-    mp[right_char] = window_end;
     if (mp.find(right_char) != mp.end()) {
       window_start = max(window_start, mp[right_char] + 1);
     }
+    mp[right_char] = window_end;
     res = max(res, window_end - window_start + 1);
     window_end += 1;
   }
