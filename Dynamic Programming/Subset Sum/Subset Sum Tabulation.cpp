@@ -1,9 +1,3 @@
-
-#include <bits/stdc++.h>
-#include <iostream>
-
-using namespace std;
-
 #include <bits/stdc++.h>
 #include <iostream>
 
@@ -41,7 +35,7 @@ public:
         if (arr[i - 1] <= j) {
           dp[i][j] = dp[i - 1][j - arr[i - 1]] || dp[i - 1][j];
         } else {
-          dp[i][j] = dp[i - 1][j]
+          dp[i][j] = dp[i - 1][j];
         }
       }
     }
@@ -49,5 +43,4 @@ public:
   }
 };
 
-int main() { return 0; }
 int main() { return 0; }
