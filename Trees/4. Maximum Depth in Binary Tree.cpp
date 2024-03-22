@@ -1,8 +1,6 @@
-
 #include <bits/stdc++.h>
 
 #include <iostream>
-
 using namespace std;
 
 struct TreeNode {
@@ -16,20 +14,19 @@ struct TreeNode {
 
 class Solution {
    private:
-    int solve(TreeNode *root, int &res) {
+    int solve(TreeNode *root) {
         if (!root) return 0;
-        int left = solve(root->left, res);
-        int right = solve(root->right, res);
-        res = max(left + right, res);
-        return 1 + max(left, right);
+        int h1 = 1 + solve(root->left);
+        int h2 = 1 + solve(root->right);
+        return max(h1, h2);
     }
 
    public:
-    int diameterOfBinaryTree(TreeNode *root) {
-        int res = 0;
-        solve(root, res);
-        return res;
+    int maxDepth(TreeNode *root) {
+        return solve(root);
     }
 };
 
-int main() { return 0; }
+int main() {
+    return 0;
+}
