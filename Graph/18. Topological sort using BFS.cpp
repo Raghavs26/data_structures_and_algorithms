@@ -7,7 +7,6 @@ class Solution {
 
 public:
   vector<int> topoSort(int V, vector<int> adj[]) {
-    vector<bool> visited(V, false);
     vector<int> indegree(V, 0);
     for (int i = 0; i < V; i++) {
       for (auto nh : adj[i]) {
