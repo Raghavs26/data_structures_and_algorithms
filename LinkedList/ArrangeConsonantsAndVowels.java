@@ -1,4 +1,6 @@
-import java.*;
+package LinkedList;
+
+import java.util.*;
 
 class Node {
     char data;
@@ -11,7 +13,7 @@ class Node {
 }
 
 class Solution {
-    private boolean isVowel(char ch) {
+    private boolean isVowel(char c) {
         return (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
     }
 

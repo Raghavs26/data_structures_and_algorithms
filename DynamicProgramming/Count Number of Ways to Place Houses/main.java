@@ -1,4 +1,4 @@
-import java.*;
+import java.util.*;
 
 class Solution {
     final int mod = (int) 1e9 + 7;
