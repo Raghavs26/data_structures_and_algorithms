@@ -30,7 +30,12 @@ class Solution {
         }
         int rootValue = preOrder[preIndex[0]];
         TreeNode root = new TreeNode(rootValue);
-      
+        int index = inStart;
+        while (index <= inEnd) {
+            if (inOrder[index] == rootValue)
+                break;
+            index++;
+        }
 
         preIndex[0]++;
         root.left = solve(preOrder, preIndex, inOrder, inStart, index - 1);

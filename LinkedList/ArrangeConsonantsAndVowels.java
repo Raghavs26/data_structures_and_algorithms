@@ -1,7 +1,5 @@
 package LinkedList;
 
-import java.util.*;
-
 class Node {
     char data;
     Node next;
