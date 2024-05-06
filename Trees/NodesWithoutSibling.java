@@ -1,6 +1,6 @@
 package Trees;
 
-import java.util.git ;
+import java.util.*;
 
 class Node {
     int data;
