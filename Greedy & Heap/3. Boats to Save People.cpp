@@ -1,11 +1,13 @@
-package Greedy;
+#include <bits/stdc++.h>
 
-import java.util.Arrays;
+#include <iostream>
+using namespace std;
 
 class Solution {
-    public int numRescueBoats(int[] people, int limit) {
-        int n = people.length;
-        Arrays.sort(people);
+   public:
+    int numRescueBoats(vector<int>& people, int limit) {
+        int n = people.size();
+        sort(people.begin(), people.end());
         int boats = 0;
         int left = 0, right = n - 1;
         while (left <= right) {
@@ -18,8 +20,8 @@ class Solution {
         }
         return boats;
     }
-}
+};
 
-public class BoatsToSavePeople {
-
+int main() {
+    return 0;
 }
