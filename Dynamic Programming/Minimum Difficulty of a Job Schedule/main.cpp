@@ -5,37 +5,6 @@ using namespace std;
 
 #include <bits/stdc++.h>
 
-
-int subarrayMaximum(vector<int>& arr, int k) {
-    int n = arr.size();
-    if (n < k) return -1;
-    vector<vector<int>> dp(n + 1, vector<int>(k + 1, -1));
-
-    function<int(int, int)> solve = [&](int index, int day) {
-        if (index == n) {
-            if (day == 0) {
-                return 0;
-            }
-            return (int)1e8;
-        }
-        if (day == 0) {
-            return (int)1e8;
-        }
-        if (dp[index][day] != -1) return dp[index][day];
-
-        int res = INT_MAX;
-        int maxDifficulty = arr[index];
-        for (int i = index; i < n - day + 1; i++) {
-            maxDifficulty = (maxDifficulty, arr[index]);
-            int tempAns = maxDifficulty + solve(i + 1, day - 1);
-            res = min(res, tempAns);
-            dp[index][day] = res;
-        }
-        return res;
-    };
-    return solve(0, k);
-}
-
 class Solution {
     vector<vector<int>> dp;
 
