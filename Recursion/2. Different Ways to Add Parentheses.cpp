@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// time complexity : O(3^N)
+// space complexity : O(N)
+
 class Solution {
    private:
     vector<int> solve(string expression) {
