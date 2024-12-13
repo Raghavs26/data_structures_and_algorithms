@@ -3,7 +3,6 @@ package main
 func lexicalOrder(n int) []int {
 	var res []int
 	var solve func(int)
-	
 
 	solve = func(currentNumber int) {
 		if currentNumber > n {
